@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    
+  <head>
+    <title>Kinesin Walking Interactive Simulator</title>
+    <link rel='stylesheet' type='text/css' href='src/css/jquery.bonsai.css'>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel='stylesheet' type='text/css' href='src/css/mystyle.css'>
+    <link rel="stylesheet" type="text/css" href="src/css/fd-slider.css">
+    <link rel="stylesheet" type="text/css" href="src/css/fd-slider-tooltip.css">
+    <meta charset="utf-8">
+  </head>
+    
+  <body>
+      
+    <div id="header">
+      <h2>Experiment with Kinesin Walking Using this Interactive Simulator</h2>
+    </div>
+      
+    <div id="3dwindow"></div>
+      
+    <div id="test"></div>
+
+    <div id="parameters"></div>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="src/plugins/three.js"></script>
+    <script src="src/plugins/physi.js"></script>
+    <script type="text/javascript">
+      Physijs.scripts.worker = 'src/plugins/physijs_worker.js';
+      Physijs.scripts.ammo = 'ammo.js';
+    </script>
+    <script src="src/plugins/OrbitControls.js"></script>
+    <script src="src/plugins/ColladaLoader2.js"></script>
+    <script src='src/plugins/spin.min.js'></script>
+      
+    <script src="src/js/KinesinHelpers.js"></script>
+    <script src="src/js/CameraTarget.js"></script>
+    <script src="src/js/Controller.js"></script>
+    <script src="src/js/UI.js"></script>
+    <script src="src/js/BezierSpline.js"></script>
+    <script src="src/js/Molecule.js"></script>
+    <script src="src/js/Motor.js"></script>
+    <script src="src/js/NeckLinker.js"></script>
+    <script src="src/js/Nucleotide.js"></script>
+    <script src="src/js/Hips.js"></script>
+    <script src="src/js/Organelle.js"></script>
+    <script src="src/js/Microtubule.js"></script>
+    <script src="src/js/Tubulin.js"></script>
+
+  </body>
+    
+</html>
