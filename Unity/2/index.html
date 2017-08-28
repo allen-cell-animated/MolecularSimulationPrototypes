@@ -12,9 +12,46 @@
     <div class="template-wrap clear">
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="540px" width="960px"></canvas>
       <br>
-      <div class="logo"></div>
       <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">Kinesin</div>
+        <div class="key">
+          
+          <h1>Parameter Key</h1>
+          
+          <h3>Navigation</h3>
+          <p>To look around: click and drag somewhere other than the menu.<br/>
+            To zoom: use mouse scrollwheel or up/down arrow keys.<br/>
+            To open the menu: click the gray button on the bottom center.</p>
+          
+          <h3>Cycle Diagram</h3>
+          <p>This diagram (left part of menu) shows the 6 possible states for each motor. The transition arrows between states are labeled with the current rate of the transition (units = transitions per second). Each of these rates can be adjusted by clicking and dragging the circular knob within each arrow. The states are defined as follows:</p>
+          <ul>
+              <li>Mt-KT = ATP bound, bound to tubulin</li>
+              <li>Mt-KDP = ADP and Pi bound, bound to tubulin</li>
+              <li>KDP = ADP and Pi bound, diffusing freely</li>
+              <li>KD = ADP bound, diffusing freely</li>
+              <li>Mt-KD = ADP bound, bound to tubulin</li>
+              <li>Mt-K = no nucleotide, bound to tubulin</li>
+          </ul>
+          
+          <h3>Average Walking Speed</h3>
+          <p>Calculated by dividing the distance travelled by the time passed since start (or restart).</p>
+          
+          <h3>Time per Step</h3>
+          <p>The simulated time that passes in each calculation step of the simulation. Increasing it will increase the probability of transitioning state, since probability of state transition is calculated from the number of events that would theoretically happen in a given time interval.</p>
+          
+          <h3>Steps per Frame</h3>
+          <p>The number of simulation steps for each frame that you can see rendered. It functions like a 'fast forward' button. For example, if you set it to 50, each motor will take 50 random steps for every 1 that you see rendered.</p>
+          
+          <h3>Necklink Length</h3>
+          <p>The length of the unstructured necklinker peptide that connects the C-terminal of the motor domain to the 'hips' (the start of the tropomyosin coiled-coil).</p>
+          
+          <h3>Snapping Speed</h3>
+          <p>Once ATP binds, the hips move to the docked position in front of the bound motor with this speed (units = degrees per real-world second)</p>
+          
+          <h3>Mean Step Size</h3>
+          <p>The average distance a freely diffusing molecule moves in one step. Each step, this distance is randomly sampled from an exponential distribution with this as the mean.</p>
+          
+      </div> 
     </div>
     <script type='text/javascript'>
   var Module = {
@@ -30,6 +67,6 @@
   };
 </script>
 <script src="Release/UnityLoader.js"></script>
-
+      
   </body>
 </html>
