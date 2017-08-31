@@ -23,7 +23,7 @@
             To open the menu: click the gray button on the bottom center.</p>
           
           <h3>Cycle Diagram</h3>
-          <p>This diagram (left part of menu) shows the 6 possible states for each motor. The transition arrows between states are labeled with the current rate of the transition (units = transitions per second). Each of these rates can be adjusted by clicking and dragging the circular knob within each arrow. The states are defined as follows:</p>
+          <p>This diagram (left part of menu) shows the 6 possible states for each motor. The transition arrows between states are labeled with the current rate of the transition (units = transitions per simulation second). Each of these rates can be adjusted by clicking and dragging the circular knob within each arrow. The states are defined as follows:</p>
           <ul>
               <li>Mt-KT = ATP bound, bound to tubulin</li>
               <li>Mt-KDP = ADP and Pi bound, bound to tubulin</li>
@@ -33,23 +33,23 @@
               <li>Mt-K = no nucleotide, bound to tubulin</li>
           </ul>
           
-          <h3>Average Walking Speed</h3>
+          <h3>Average Velocity</h3>
           <p>Calculated by dividing the distance travelled by the time passed since start (or restart).</p>
           
-          <h3>Time per Step</h3>
-          <p>The simulated time that passes in each calculation step of the simulation. Increasing it will increase the probability of transitioning state, since probability of state transition is calculated from the number of events that would theoretically happen in a given time interval.</p>
-          
-          <h3>Steps per Frame</h3>
-          <p>The number of simulation steps for each frame that you can see rendered. It functions like a 'fast forward' button. For example, if you set it to 50, each motor will take 50 random steps for every 1 that you see rendered.</p>
-          
-          <h3>Necklink Length</h3>
-          <p>The length of the unstructured necklinker peptide that connects the C-terminal of the motor domain to the 'hips' (the start of the tropomyosin coiled-coil).</p>
-          
-          <h3>Snapping Speed</h3>
-          <p>Once ATP binds, the hips move to the docked position in front of the bound motor with this speed (units = degrees per real-world second)</p>
+          <h3>Time</h3>
+          <p>How much slower the simulation is running compared to real time.</p>
           
           <h3>Mean Step Size</h3>
-          <p>The average distance a freely diffusing molecule moves in one step. Each step, this distance is randomly sampled from an exponential distribution with this as the mean.</p>
+          <p>The average distance a freely diffusing molecule moves in one step. Each step, this distance is randomly sampled from an exponential distribution with this number as the mean.</p>
+          
+          <h3>Necklink Length</h3>
+          <p>The length of the unstructured necklinker peptide that connects the C-terminal of the motor domain to the bottom of the tropomyosin coiled-coil.</p>
+          
+          <h3>Steer NL</h3>
+          <p>When ATP binds, should the necklinker bind and pull the bottom of the coiled coil to the front of the bound motor?</p>
+          
+          <h3>Snapping Speed</h3>
+          <p>If 'Steer NL' is checked, the necklinker binds with this speed (units = degrees per simulation millisecond)</p>
           
       </div> 
     </div>
