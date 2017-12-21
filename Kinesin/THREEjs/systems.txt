@@ -1,0 +1,18 @@
+Kinesin pieces:
+
+1. setup THREEjs canvas & PhysiJS
+
+2. create physics colliders and constraints, align geometry, build MT
+
+3. camera controls and follow target
+
+4. parameter UI
+
+5. update every frame: simulate and render, frame counting
+
+6. motion: random walk and angular motors
+
+7. binding: collision detection with tubulin
+
+8. neck linker snapping
+

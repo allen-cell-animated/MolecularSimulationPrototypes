@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Kinesin</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData/UnityProgress.js"></script>
+  </head>
+  <body class="template">
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="540px" width="960px"></canvas>
+      <br>
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+        <div class="key">
+          
+          <h1>Parameter Key</h1>
+          
+          <h3>Navigation</h3>
+          <p>To look around: click and drag somewhere other than the menu.<br/>
+            To zoom: use mouse scrollwheel or up/down arrow keys.<br/>
+            To open the menu: click the gray button on the bottom center.</p>
+          
+          <h3>Cycle Diagram</h3>
+          <p>This diagram (left part of menu) shows the 6 possible states for each motor. The transition arrows between states are labeled with the current rate of the transition (units = transitions per simulation second). Each of these rates can be adjusted by clicking and dragging the circular knob within each arrow. The states are defined as follows:</p>
+          <ul>
+              <li>Mt-KT = ATP bound, bound to tubulin</li>
+              <li>Mt-KDP = ADP and Pi bound, bound to tubulin</li>
+              <li>KDP = ADP and Pi bound, diffusing freely</li>
+              <li>KD = ADP bound, diffusing freely</li>
+              <li>Mt-KD = ADP bound, bound to tubulin</li>
+              <li>Mt-K = no nucleotide, bound to tubulin</li>
+          </ul>
+          
+          <h3>Average Velocity</h3>
+          <p>Calculated by dividing the distance travelled by the time passed since start (or restart).</p>
+          
+          <h3>Time</h3>
+          <p>How much slower the simulation is running compared to real time.</p>
+          
+          <h3>Mean Step Size</h3>
+          <p>The average distance a freely diffusing molecule moves in one step. Each step, this distance is randomly sampled from an exponential distribution with this number as the mean.</p>
+          
+          <h3>Necklink Length</h3>
+          <p>The length of the unstructured necklinker peptide that connects the C-terminal of the motor domain to the bottom of the tropomyosin coiled-coil.</p>
+          
+          <h3>Steer NL</h3>
+          <p>When ATP binds, should the necklinker bind and pull the bottom of the coiled coil to the front of the bound motor?</p>
+          
+          <h3>Snapping Speed</h3>
+          <p>If 'Steer NL' is checked, the necklinker binds with this speed (units = degrees per simulation millisecond)</p>
+          
+      </div> 
+      <div class="title">Kinesin</div>
+    </div>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    backgroundColor: "#222C36",
+    splashStyle: "Light",
+    dataUrl: "Release/4.data",
+    codeUrl: "Release/4.js",
+    asmUrl: "Release/4.asm.js",
+    memUrl: "Release/4.mem",
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
